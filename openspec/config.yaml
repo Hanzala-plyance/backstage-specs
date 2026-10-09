@@ -5,7 +5,8 @@ context: |
   This standalone OpenSpec store is Backstage's shared planning home.
   Implementation lives in https://github.com/Hanzala-plyance/backstage.
   Read governance/constitution.md and governance/components.json first.
-  The code repository's starter branch is reference material; main starts empty.
+  Canonical planning branch: meta. Product promotion: develop -> stage -> main.
+  Main contains stable releases only; starter is reference material.
   Identify the implementation checkout and branch before applying tasks.
   Keep application code out of this repository and keep all specs here.
   Existing starter behavior is not automatically an accepted requirement.

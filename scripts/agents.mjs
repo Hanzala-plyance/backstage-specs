@@ -55,7 +55,7 @@ async function loadSources() {
 export async function synchronize(root, { check = false, external = false } = {}) {
   const sources = await loadSources();
   const pointer = 'https://github.com/Hanzala-plyance/backstage-specs';
-  const prefix = `Generated from ${pointer}/tree/main/governance.\nSource SHA-256: \`${sources.hash}\`.\nEdit the canonical sources in backstage-specs; regenerate this managed block.\n`;
+  const prefix = `Generated from ${pointer}/tree/meta/governance.\nSource SHA-256: \`${sources.hash}\`.\nEdit the canonical sources in backstage-specs; regenerate this managed block.\n`;
   const location = external
     ? '\nThis is an implementation checkout. Open the separate backstage-specs checkout\nfor all OpenSpec commands and planning artifacts; its local path is not assumed.\n'
     : '\nThis is the specifications checkout. Application code belongs in the separate\nBackstage checkout. Read README.md for setup, commands, and feature handoffs.\n';
@@ -115,8 +115,8 @@ async function main() {
     const git = spawnSync('git', ['-C', root, 'rev-parse', '--show-toplevel'], { encoding: 'utf8' });
     if (git.status !== 0 || await realpath(git.stdout.trim()) !== root) throw new Error('--repo must be the root of a Git checkout.');
     const branch = spawnSync('git', ['-C', root, 'branch', '--show-current'], { encoding: 'utf8' });
-    if (!check && (!branch.stdout.trim() || branch.stdout.trim() === 'main')) {
-      throw new Error('Install instructions on starter or a feature branch; leave main unchanged during setup.');
+    if (!check && (!branch.stdout.trim() || ['main', 'stage'].includes(branch.stdout.trim()))) {
+      throw new Error('Install instructions on develop or a feature branch, then promote through stage to main.');
     }
   }
   const result = await synchronize(root, { check, external: action === 'install' });

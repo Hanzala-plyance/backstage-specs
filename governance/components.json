@@ -1,16 +1,16 @@
 {
   "repository": "https://github.com/Hanzala-plyance/backstage",
   "referenceBranch": "starter",
-  "integrationBranch": "main",
+  "integrationBranch": "develop",
   "components": [
     {
       "id": "game",
-      "path": "YARG-master",
-      "description": "Unity rhythm game reference project",
+      "path": "Backstage",
+      "description": "Backstage Unity game, derived from YARG",
       "instructions": [
         "Preserve Unity .meta files, serialized assets, and the existing Git LFS rules.",
-        "Preserve YARG's attribution and license when moving reference code.",
-        "YARG.Core was an empty directory in the import; the nested .gitmodules file is reference metadata, not an initialized submodule. Plan dependency setup explicitly before claiming the project builds.",
+        "Public product branding is Backstage. Preserve YARG attribution, license notices, internal namespaces, serialized GUIDs, and dependency identities.",
+        "Build with the pinned Unity editor and initialized pinned YARG.Core submodule. A source-only check is not game-build or gameplay evidence.",
         "Record the Unity editor version and any platform-specific build checks in the feature handoff."
       ]
     },
@@ -22,7 +22,8 @@
         "The source files are under build/; do not ignore or remove that whole directory.",
         "Keep generated .app bundles, binaries, settings backups, and live device/session state local.",
         "Do not change system permissions, controller settings, or launch privileged bridges as part of a documentation or planning task.",
-        "Distinguish source-level checks from hardware verification and state which devices were actually exercised."
+        "Distinguish source-level checks from hardware verification and state which devices were actually exercised.",
+        "Backstage is a native game target. Keep unsupported bridge routes disabled until verified against Backstage; never inject Clone Hero-specific adapters into it."
       ]
     },
     {
@@ -33,8 +34,12 @@
         "Keep conversion output/, caches, downloaded media, and local dependencies out of Git.",
         "Preserve the existing example charts when importing reference files; treat generated results separately from fixtures.",
         "Record audio/model/network dependencies and use focused checks for chart or pipeline changes.",
-        "Do not claim that a chart is playable based only on successful file generation."
+        "Do not claim that a chart is playable based only on successful file generation.",
+        "Publish validated completed songs atomically to the shared Backstage Songs folder; never expose partial conversions as installed songs."
       ]
     }
-  ]
+  ],
+  "planningBranch": "meta",
+  "stagingBranch": "stage",
+  "releaseBranch": "main"
 }
