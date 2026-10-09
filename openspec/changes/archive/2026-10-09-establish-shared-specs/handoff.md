@@ -31,10 +31,12 @@ hardware behavior was changed or tested as part of this planning setup.
 | Code-side store pointer | Passed | list and doctor resolve root to backstage-specs with source declared and store_id backstage |
 | Source branch publication | Passed | starter is 31ec865f7515f572eb337eb2d0f51d7ea3590ece on origin |
 | Product main preserved | Passed | Remote main is ff63180f0cfee3759963d535d5cde48fedb4ad12; local main tree is empty |
+| Accepted specs and archive validation | Passed | All 3 accepted specs pass strict validation and all archived tasks are complete |
+| Specs publication | Passed | Initial main commit fe927986ab2042007bbc0cf42fa705575e5cbfaf is on origin |
 
 ## Next action
 
 Setup is archived as 2026-10-09-establish-shared-specs. The initial specs main
-commit contains its history and accepted governance capabilities. Publish that
-commit, then create a separate named change for the first product feature.
+commit contains its history and accepted governance capabilities and is published.
+Create a separate named change for the first product feature.
 No product feature has been invented or implemented by setup.
