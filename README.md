@@ -1,3 +1,5 @@
+> This is the historical `main` branch. Canonical planning and current policy live on [meta](https://github.com/Hanzala-plyance/backstage-specs/tree/meta). Switch to meta before starting work.
+
 # Backstage Specs
 
 Shared feature planning and agent governance for [Backstage](https://github.com/Hanzala-plyance/backstage), powered by [OpenSpec](https://github.com/Fission-AI/OpenSpec).
@@ -12,7 +14,7 @@ You need Git and **Node.js 20.19 or newer**. CI uses Node 22. OpenSpec **1.14.1*
 is pinned in the lockfile; use the repo-local CLI through npm.
 
 ```bash
-git clone https://github.com/Hanzala-plyance/backstage-specs.git
+git clone --branch meta https://github.com/Hanzala-plyance/backstage-specs.git
 cd backstage-specs
 npm ci
 npm run check
@@ -26,33 +28,37 @@ for **49 repository-scoped targets**, including Codex, Claude, Cursor, Copilot,
 Gemini, OpenCode, Cline, Kiro, and the universal `.agents` target.
 See [the full generated agent list](docs/supported-agents.md).
 
-To work with the imported reference projects, clone the code repo beside it:
+To work on the product, clone the code repo beside it:
 
 ```bash
 cd ..
-git clone --branch starter https://github.com/Hanzala-plyance/backstage.git Backstage
+git clone --recurse-submodules --branch develop https://github.com/Hanzala-plyance/backstage.git Backstage
 cd backstage-specs
 npm run agents:install -- --repo ../Backstage
 npm run agents:install -- --repo ../Backstage --check
 ```
 
-Install Git LFS before cloning if you need YARG's assets. YARG.Core was an empty
-directory in the original import; building YARG needs explicit dependency setup.
+Install Git LFS before cloning for game assets. Develop pins the upstream core
+submodule. Building Backstage requires Unity **6000.3.5f2**; automated source tests
+do not establish a playable or hardware-qualified release.
 
 ## Two repositories, one feature ID
 
 | Location | Responsibility |
 | --- | --- |
-| `backstage-specs/main` | Accepted specs, shared governance, workflows, documentation |
-| `backstage-specs/feature/<change-id>` | Feature proposal, deltas, design, tasks, handoff |
-| `backstage/starter` | Imported YARG-master, mac-riff, and song-converter references |
-| `backstage/main` | Product integration branch; empty at bootstrap |
-| `backstage/feature/<change-id>` | Implementation of that feature, based on main |
+| `backstage-specs/meta` | Canonical business logic, accepted specs, active deltas, decisions, agent governance |
+| `backstage-specs/feature/<change-id>` | Proposed planning and policy changes, based on meta |
+| `backstage/starter` | Preserved imported game, controller, and converter reference |
+| `backstage/develop` | Integrated development candidate |
+| `backstage/stage` | Release candidates that passed the Unity build gate |
+| `backstage/main` | Stable releases that passed all acceptance gates |
+| `backstage/feature/<change-id>` | Implementation branch, based on develop |
 
-Use the same kebab-case ID in both repositories. Copy only the starter paths a
-feature needs onto its implementation branch. Keep starter as reference; do not
-merge the whole import into main. Archiving specs, merging code, and deploying
-are separate events.
+Use the same kebab-case change ID in both repositories. Product changes move by
+pull request through **feature → develop → stage → main**, including fixes.
+Stage accepts develop; main accepts stage. The documentation-only bootstrap on
+stage/main is not an application release. Starter is historical reference.
+Archiving a spec, merging code, and deploying are separate events.
 
 [governance/components.json](governance/components.json) maps the game,
 controller, and conversion components and records their local instructions.
@@ -63,6 +69,8 @@ Imported behavior is not automatically an accepted product requirement.
 1. **Start a change** in the specs checkout:
 
    ```bash
+   git switch meta
+   git pull --ff-only
    git switch -c feature/add-song-import
    npm run openspec -- new change add-song-import
    npm run openspec -- status --change add-song-import
@@ -80,7 +88,7 @@ Imported behavior is not automatically an accepted product requirement.
 
    ```bash
    git fetch origin
-   git switch -c feature/add-song-import origin/main
+   git switch -c feature/add-song-import origin/develop
    ```
 
    From this specs checkout, run `npm run agents:install -- --repo ../Backstage`.
@@ -168,7 +176,7 @@ The generator embeds a source hash and maintains only the
 `BACKSTAGE-CONSTITUTION` block. It preserves handwritten text outside the block
 and refuses malformed markers, escaping paths, and symlink destinations.
 Check mode reads without writing. The installer never commits or pushes and
-requires a code working branch other than main. Review and commit generated
+requires a code working branch other than stage or main. Review and commit generated
 updates in both repos together. New agent types can use the universal fallback
 or gain a native loader by extending the adapter manifest.
 
@@ -191,7 +199,7 @@ npm run openspec -- instructions apply --change <change-id> --store backstage
 npm run openspec -- store doctor backstage --json
 ```
 
-The connected starter checkout has an `openspec/config.yaml` pointer containing
+The connected code checkout has an `openspec/config.yaml` pointer containing
 `store: backstage`, with no copied specs. Using it requires a store-capable CLI;
 the older global installation on the setup machine does not support stores.
 For example, from the sibling code checkout:
@@ -200,14 +208,42 @@ For example, from the sibling code checkout:
 node ../backstage-specs/node_modules/@fission-ai/openspec/bin/openspec.js list
 ```
 
-A new branch from empty main does not inherit this pointer. Run planning commands
-in this specs checkout, use `--store backstage`, or create the same config-only
-pointer on the feature branch. Do not initialize local planning folders in a
-code repository that points at an external store.
+Run planning commands in this specs checkout or use `--store backstage`. Keep the
+store checkout on `meta` unless actively reviewing a planning feature branch.
+Do not initialize duplicate planning folders in a connected code repository.
+
+## Product and release status
+
+Read [the business overview](business/README.md), [product contracts and roadmap](business/product.md),
+[decisions](business/decisions.md), and [constitution](governance/constitution.md)
+before changing behavior. The venue product includes a customer kiosk, timed
+sessions, staff bay controls, diagnostics/recovery, offline operation, and fleet
+management. These are a roadmap, not claims of implemented features.
+
+The first development candidate combines Backstage game sources, Add New Song
+search/conversion/queue, a shared local song library, and native/MIDI controller
+setup. The Xbox Riffmaster injection bridge supports Clone Hero only; a Backstage
+bridge remains blocked pending an actual implementation and hardware evidence.
+
+[The foundation change](openspec/changes/integrate-backstage-foundation/) stays active
+until its remaining Unity, gameplay, and hardware acceptance tasks are complete.
+[Release evidence](releases/0.1.0-foundation.md) records what has actually run.
+Agents must challenge poor code, unsafe release claims, weak product decisions,
+and unnecessary complexity with concrete reasons and a better option.
+
+## Change history and handoff
+
+Keep feature deltas and tasks under `openspec/changes/<id>/`, business decisions
+in `business/decisions.md`, and release evidence under `releases/`. Record code
+commit/PR links, test outcomes, blockers, and the next action in each handoff.
+Commit these updates to meta through planning review. Do not rewrite archived
+history to make earlier decisions appear current; add a new decision or delta.
 
 ## Repository map
 
 ```text
+business/                  Product brief, business contracts, roadmap, decisions
+releases/                  Release evidence and outstanding acceptance gates
 governance/                 Canonical policy, component map, adapter manifest
 openspec/config.yaml       Shared context and artifact rules
 openspec/specs/            Accepted capability requirements
