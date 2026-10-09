@@ -7,3 +7,6 @@ in OpenSpec changes and release evidence, not in this roadmap.
 
 The canonical branch is [meta](https://github.com/Hanzala-plyance/backstage-specs/tree/meta).
 Code follows develop -> stage -> main. Main contains only validated stable releases.
+
+[Browser runtime evaluation](runtime-options.md) compares a browser-native client,
+Godot, Unity web export and Chromium packaging. This is an evaluation, not an engine migration.

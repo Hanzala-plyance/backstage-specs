@@ -40,3 +40,12 @@ for every repository-scoped target and a universal fallback for other agents.
 #### Scenario: An agent lacks a native adapter
 - **WHEN** an agent has no maintained native instruction loader
 - **THEN** the contributor can explicitly supply AGENTS.md and universal OpenSpec workflow artifacts
+
+### Requirement: Critical product and engineering judgment
+Agents SHALL use the business context on meta and challenge brittle code, poor
+UX, unsupported integrations, and false readiness claims with concrete consequences
+and a more reliable alternative.
+
+#### Scenario: A proposed controller bridge targets another game
+- **WHEN** an agent cannot demonstrate compatibility with Backstage
+- **THEN** it reports the limitation, keeps that route disabled, and records the work needed for a supported route

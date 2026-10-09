@@ -16,3 +16,11 @@ and release evidence. Product work travels develop -> stage -> main. Bootstrap
 README/governance is permitted on all branches; runtime release promotion requires
 verified builds and hardware/game acceptance. The first source integration remains
 on develop until those gates are met.
+
+## 2026-10-09 — Browser runtime evaluation, no migration decision
+
+The user asked whether Chromium could provide a lighter, faster game, then chose
+**evaluate the options only**. [The assessment](runtime-options.md) recommends a
+browser-native Three.js/Web Audio candidate if migration is later selected.
+Performance remains unmeasured; no engine replacement or prototype is authorized
+by this evaluation. Preserve the current implementation and release gates.

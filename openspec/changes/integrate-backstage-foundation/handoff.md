@@ -43,3 +43,10 @@ then import and play a converted song and verify actual controller inputs. Recor
 artifact/checksum, exact tested commit, logs, clean-install/recovery results and
 reviewer in the meta release report and code release/acceptance.json. Follow
 feature → develop → stage → main; do not skip required checks.
+
+## Published candidate and later direction
+
+Code commit: d05966072ea950441aca54710b84c698b16437bd.
+[Develop CI passed](https://github.com/Hanzala-plyance/backstage/actions/runs/38004443316).
+The user subsequently requested browser-engine evaluation only; see
+`business/runtime-options.md`. No migration or new prototype was started.

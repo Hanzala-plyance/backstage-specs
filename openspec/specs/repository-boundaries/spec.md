@@ -1,26 +1,34 @@
 # repository-boundaries Specification
 
 ## Purpose
-Keep Backstage planning independent of application code while preserving reference projects, an initially empty product main branch, and component-specific guidance.
+Keep canonical meta planning independent of application code, preserve reference projects, and promote verified product changes through develop, stage, and main with component-specific guidance.
 
 ## Requirements
 
 ### Requirement: Separate planning home
-Specifications and governance SHALL live in independent backstage-specs, while
-application implementation lives in backstage.
+Specifications, business logic, governance, agent changes, decisions, and feature
+deltas SHALL live on backstage-specs/meta; implementation SHALL live in backstage.
+
+#### Scenario: A contributor starts from any code branch
+- **WHEN** a contributor reads its root README
+- **THEN** it links to the canonical specs meta branch and explains the product branch roles
 
 #### Scenario: A code checkout connects to shared planning
-- **WHEN** a code checkout declares the registered backstage store
-- **THEN** a store-capable CLI resolves planning to the specs checkout without duplicating accepted specs in the code repository
+- **WHEN** an agent begins implementation in backstage
+- **THEN** it uses the backstage OpenSpec store backed by backstage-specs/meta and keeps planning artifacts there
 
 ### Requirement: Preserved reference and product branches
-Setup SHALL preserve imported projects on backstage/starter and leave
-backstage/main empty. Future implementation branches SHALL bring across only
-reference code needed for their feature.
+Product changes SHALL follow develop -> stage -> main. Starter SHALL retain the
+reference import. Main SHALL contain stable releases only, with a documentation-only
+bootstrap permitted before the first qualified application release.
+
+#### Scenario: An unverified game candidate exists
+- **WHEN** Unity build or gameplay/hardware acceptance is incomplete
+- **THEN** the candidate remains on develop and cannot be represented as a stable main release
 
 #### Scenario: Shared planning is installed
-- **WHEN** governance is installed during bootstrap
-- **THEN** only starter receives instruction and pointer files and main retains its empty tree
+- **WHEN** repository governance is bootstrapped
+- **THEN** starter retains the reference source, develop holds integration, and stage and main receive documentation and release gates without unverified application code
 
 ### Requirement: Scoped component guidance
 Instruction installation SHALL add component AGENTS.md only for component
