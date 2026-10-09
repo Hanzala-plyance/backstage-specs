@@ -1,0 +1,34 @@
+schema: spec-driven
+githubCopilot:
+  cloudAgent: false
+context: |
+  This standalone OpenSpec store is Backstage's shared planning home.
+  Implementation lives in https://github.com/Hanzala-plyance/backstage.
+  Read governance/constitution.md and governance/components.json first.
+  The code repository's starter branch is reference material; main starts empty.
+  Identify the implementation checkout and branch before applying tasks.
+  Keep application code out of this repository and keep all specs here.
+  Existing starter behavior is not automatically an accepted requirement.
+rules:
+  proposal:
+    - Identify affected components and repository boundaries.
+    - Describe the problem, intended behavior, and excluded scope.
+  specs:
+    - Use SHALL or MUST and at least one WHEN/THEN scenario per requirement.
+    - Describe observable outcomes rather than specific agent providers.
+  design:
+    - Record implementation repository, branch, starter paths, and dependencies.
+    - Identify verification evidence and cross-component contracts.
+  tasks:
+    - Keep tasks independently verifiable and label affected components.
+    - Include instruction regeneration when governance changes and a handoff
+      update.
+operations:
+  apply:
+    guidance:
+      - Resolve the implementation checkout from design.md before editing code.
+      - Keep the same change ID and update handoff.md when switching agents.
+  archive:
+    guidance:
+      - Require completed tasks and recorded verification evidence.
+      - Archiving is separate from code merge and deployment.

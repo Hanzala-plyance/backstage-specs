@@ -1,0 +1,27 @@
+name: Validate specs and agent governance
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - name: Check reproducible OpenSpec workflows
+        run: |
+          npm run workflows:sync
+          git diff --exit-code
+          test -z "$(git ls-files --others --exclude-standard)"
+        env:
+          DO_NOT_TRACK: '1'

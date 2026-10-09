@@ -1,0 +1,12 @@
+[
+  { "tool": "Universal / Codex / OpenCode / Amp / Factory / compatible agents", "path": "AGENTS.md" },
+  { "tool": "Claude Code", "path": "CLAUDE.md" },
+  { "tool": "Gemini CLI", "path": "GEMINI.md" },
+  { "tool": "GitHub Copilot", "path": ".github/copilot-instructions.md" },
+  { "tool": "Cursor", "path": ".cursor/rules/backstage.mdc", "frontmatter": "---\ndescription: Shared Backstage feature and governance instructions\nalwaysApply: true\n---\n\n" },
+  { "tool": "Cline", "path": ".clinerules/backstage.md" },
+  { "tool": "Windsurf / compatible rules loaders", "path": ".windsurf/rules/backstage.md", "frontmatter": "---\ntrigger: always_on\n---\n\n" },
+  { "tool": "Kiro", "path": ".kiro/steering/backstage.md", "frontmatter": "---\ninclusion: always\n---\n\n" },
+  { "tool": "Amazon Q Developer", "path": ".amazonq/rules/backstage.md" },
+  { "tool": "Roo Code", "path": ".roo/rules/backstage.md" }
+]

@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/Hanzala-plyance/backstage",
+  "referenceBranch": "starter",
+  "integrationBranch": "main",
+  "components": [
+    {
+      "id": "game",
+      "path": "YARG-master",
+      "description": "Unity rhythm game reference project",
+      "instructions": [
+        "Preserve Unity .meta files, serialized assets, and the existing Git LFS rules.",
+        "Preserve YARG's attribution and license when moving reference code.",
+        "YARG.Core was an empty directory in the import; the nested .gitmodules file is reference metadata, not an initialized submodule. Plan dependency setup explicitly before claiming the project builds.",
+        "Record the Unity editor version and any platform-specific build checks in the feature handoff."
+      ]
+    },
+    {
+      "id": "controllers",
+      "path": "mac-riff",
+      "description": "MacRiff controller setup and bridge reference project",
+      "instructions": [
+        "The source files are under build/; do not ignore or remove that whole directory.",
+        "Keep generated .app bundles, binaries, settings backups, and live device/session state local.",
+        "Do not change system permissions, controller settings, or launch privileged bridges as part of a documentation or planning task.",
+        "Distinguish source-level checks from hardware verification and state which devices were actually exercised."
+      ]
+    },
+    {
+      "id": "conversion",
+      "path": "song-converter",
+      "description": "Python song conversion and chart generation reference project",
+      "instructions": [
+        "Keep conversion output/, caches, downloaded media, and local dependencies out of Git.",
+        "Preserve the existing example charts when importing reference files; treat generated results separately from fixtures.",
+        "Record audio/model/network dependencies and use focused checks for chart or pipeline changes.",
+        "Do not claim that a chart is playable based only on successful file generation."
+      ]
+    }
+  ]
+}

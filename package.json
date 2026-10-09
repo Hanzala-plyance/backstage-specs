@@ -1,0 +1,22 @@
+{
+  "name": "backstage-specs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared Backstage specifications and agent governance powered by OpenSpec",
+  "engines": { "node": ">=20.19.0" },
+  "scripts": {
+    "openspec": "openspec",
+    "workflows:sync": "node scripts/workflows.mjs",
+    "store:register": "openspec store register . --id backstage --yes --json",
+    "agents:sync": "node scripts/agents.mjs sync",
+    "agents:check": "node scripts/agents.mjs check",
+    "agents:install": "node scripts/agents.mjs install",
+    "features": "openspec list",
+    "specs": "openspec list --specs",
+    "validate": "openspec validate --all --strict --no-interactive",
+    "validate:archived": "openspec validate --archived --no-interactive",
+    "check": "npm run agents:check && npm run validate && npm run validate:archived && npm test",
+    "test": "node --test scripts/agents.test.mjs"
+  },
+  "devDependencies": { "@fission-ai/openspec": "1.14.1" }
+}

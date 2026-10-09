@@ -1,0 +1,3 @@
+version: 1
+id: backstage
+remote: https://github.com/Hanzala-plyance/backstage-specs.git
