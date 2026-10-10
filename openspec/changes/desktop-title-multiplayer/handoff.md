@@ -17,8 +17,11 @@ Planning: backstage-specs/meta.
 - Highway: narrow columns pull the camera back and keep the strikeline low.
 
 ## Evidence
-Commits: feature `1f9c1c4`, docs/evidence `eeb0ac5` (tested commit),
-evidence `92e32a8`. Packaged ASAR `3c185da86855aa8e0ea3ffa77bf23f4cf92bbea263acebd59d79bea5d53f3a70`.
+Commits: feature `1f9c1c4`, docs `eeb0ac5`, CI test fix `01396e8` (tested
+commit), evidence `92e32a8`/`e7d3ac2`. First CI run failed: the simulated pad
+strum missed its window on slow software-rendered frames; the smoke now runs the
+song clock at quarter speed for that strum. Push and PR checks then passed on
+`e7d3ac2`; the packaged artifact did not change (scripts are not bundled). Packaged ASAR `3c185da86855aa8e0ea3ffa77bf23f4cf92bbea263acebd59d79bea5d53f3a70`.
 - 35 desktop unit tests; 47 converter; 11 controller routing; promotion tests.
 - Electron smoke (source and packaged) covers opening flow and a two-player
   round: keyboard and simulated pad each score only for their owner.
