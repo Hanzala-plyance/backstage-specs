@@ -77,6 +77,11 @@ chords, .chart and split-stem support, six-fret, vocals and multiplayer. The use
 prioritized five-fret guitar; other instruments remain later work. Tap assist and
 basic MIDI drum input are retained, not represented as complete drum engines.
 
-Next action: require passing PR checks before merging to develop; record merge
-commit here. Keep stage/main unchanged pending their release gates. Complete
-remaining physical acceptance before archiving this feature.
+Merged to develop: PR #1, merge commit `bb51622724d187c9aa41908b105a24adb8acd53a`
+(2026-10-10, merged by the user after push and PR checks passed on `fe4fbd7`).
+Develop tree is identical to the tested candidate (`13cd64c` code + evidence).
+
+Next action: keep stage/main unchanged until physical guitar/gamepad/MIDI,
+audible timing, clean-machine install and recovery acceptance pass on this
+candidate; then open develop → stage with that evidence. Archive this change only
+after release acceptance.

@@ -12,7 +12,7 @@
 ## 3. Verification and publication
 - [x] 3.1 Pass automated core, boundary, converter and desktop smoke tests.
 - [x] 3.2 Build and launch a native macOS application; record size and limitations.
-- [ ] 3.3 Publish feature PR and merge to develop after required checks.
+- [x] 3.3 Publish feature PR and merge to develop after required checks.
 - [ ] 3.4 Verify physical guitars/gamepads/MIDI, audible timing, clean install and recovery before release promotion.
 
 ## 4. Five-fret guitar revision
