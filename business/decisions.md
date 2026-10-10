@@ -24,3 +24,19 @@ The user asked whether Chromium could provide a lighter, faster game, then chose
 browser-native Three.js/Web Audio candidate if migration is later selected.
 Performance remains unmeasured; no engine replacement or prototype is authorized
 by this evaluation. Preserve the current implementation and release gates.
+
+## 2026-10-09 — Authorize web desktop implementation
+
+The user supersedes evaluation-only scope and authorizes a lean desktop web app,
+song search, and configurable gamepads. Implement Electron/React/TypeScript/Vite,
+Three.js and Web Audio. Preserve Unity as reference while migrating incrementally.
+Do not claim all controller models or full YARG parity. Track implementation and
+release blockers in `web-desktop-foundation`.
+
+## 2026-10-09 — Five-fret guitar stage and scoring
+
+The user prioritizes complete five-fret guitar mechanics first and clarifies that
+Star Power doubles the score multiplier, not playback speed. Use YARG's source
+rules and genre UI conventions; use original Backstage circular 3D gems and a
+rougher rock-stage appearance. Track implemented core mechanics separately from
+advanced YARG parity and physical-controller acceptance.

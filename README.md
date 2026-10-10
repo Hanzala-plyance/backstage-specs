@@ -37,8 +37,8 @@ npm run agents:install -- --repo ../Backstage --check
 ```
 
 Install Git LFS before cloning for game assets. Develop pins the upstream core
-submodule. Building Backstage requires Unity **6000.3.5f2**; automated source tests
-do not establish a playable or hardware-qualified release.
+submodule. The active desktop build needs Node and Electron. Unity **6000.3.5f2** is only
+needed for the preserved reference game; automated tests do not establish hardware qualification.
 
 ## Two repositories, one feature ID
 
@@ -218,14 +218,16 @@ before changing behavior. The venue product includes a customer kiosk, timed
 sessions, staff bay controls, diagnostics/recovery, offline operation, and fleet
 management. These are a roadmap, not claims of implemented features.
 
-The first development candidate combines Backstage game sources, Add New Song
-search/conversion/queue, a shared local song library, and native/MIDI controller
-setup. The Xbox Riffmaster injection bridge supports Clone Hero only; a Backstage
-bridge remains blocked pending an actual implementation and hardware evidence.
+The active runtime is an Electron/React/TypeScript desktop application with Three.js
+and browser audio. It reuses the converter and shared local song library, and adds
+configurable gamepads, keyboard and MIDI input. Unity remains reference source.
+The existing Xbox Riffmaster injection bridge still targets Clone Hero and is not
+claimed as a browser-compatible device bridge.
 
-[The foundation change](openspec/changes/integrate-backstage-foundation/) stays active
-until its remaining Unity, gameplay, and hardware acceptance tasks are complete.
-[Release evidence](releases/0.1.0-foundation.md) records what has actually run.
+[The desktop change](openspec/changes/web-desktop-foundation/) tracks implementation
+and remaining physical acceptance. [Desktop release evidence](releases/0.2.0-desktop.md)
+records actual checks. The earlier Unity foundation remains historical pending
+scope reconciliation; it was never qualified as a stable game release.
 Agents must challenge poor code, unsafe release claims, weak product decisions,
 and unnecessary complexity with concrete reasons and a better option.
 

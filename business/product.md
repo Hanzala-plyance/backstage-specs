@@ -5,8 +5,9 @@
 Backstage turns rhythm gaming and karaoke into a bookable entertainment appliance
 for groups of roughly 2–6 people at bars, beer gardens, and other venues. The
 software is a core product: a customer experience, employee operations suite,
-and central management platform. The current engine decision is a Backstage-branded
-YARG fork; the original brief's Clone Hero references describe the original intent.
+and central management platform. The current runtime direction is a Backstage desktop web application using Electron,
+React/TypeScript, Three.js and Web Audio. The YARG fork remains reference; the
+original brief's Clone Hero references describe the original intent.
 
 ## Components and responsibilities
 

@@ -9,4 +9,4 @@ The canonical branch is [meta](https://github.com/Hanzala-plyance/backstage-spec
 Code follows develop -> stage -> main. Main contains only validated stable releases.
 
 [Browser runtime evaluation](runtime-options.md) compares a browser-native client,
-Godot, Unity web export and Chromium packaging. This is an evaluation, not an engine migration.
+Godot, Unity web export and Chromium packaging. The later authorized implementation is tracked in `web-desktop-foundation`.

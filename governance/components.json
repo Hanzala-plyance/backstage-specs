@@ -4,6 +4,18 @@
   "integrationBranch": "develop",
   "components": [
     {
+      "id": "desktop",
+      "path": "desktop",
+      "description": "Backstage Electron and browser game runtime",
+      "instructions": [
+        "Keep the renderer sandboxed and expose only validated, narrow IPC methods.",
+        "Keep audio-clock gameplay and controller normalization separate from React UI rendering.",
+        "Local playback must work without the optional Python preparation service.",
+        "Keep controller compatibility claims tied to actual device evidence; unknown devices use explicit mapping.",
+        "Measure app payload and runtime behavior. Do not bundle Unity assets, model weights, conversion output or Python environments."
+      ]
+    },
+    {
       "id": "game",
       "path": "Backstage",
       "description": "Backstage Unity game, derived from YARG",

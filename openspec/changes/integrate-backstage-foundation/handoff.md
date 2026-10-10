@@ -50,3 +50,9 @@ Code commit: d05966072ea950441aca54710b84c698b16437bd.
 [Develop CI passed](https://github.com/Hanzala-plyance/backstage/actions/runs/38004443316).
 The user subsequently requested browser-engine evaluation only; see
 `business/runtime-options.md`. No migration or new prototype was started.
+
+## Superseding runtime implementation
+
+The user subsequently authorized `web-desktop-foundation`. New product work uses
+the Electron runtime. Preserve this Unity history and its unperformed acceptance
+tasks; do not retroactively mark a Unity build or hardware verification as passed.

@@ -1,9 +1,9 @@
 # Browser runtime evaluation
 
-Status: **evaluation only**. The user requested comparison on 2026-10-09 and
-explicitly chose evaluation rather than a prototype or full migration. No engine
-replacement is approved or implemented. The existing Unity candidate remains on
-develop, blocked from release pending its recorded acceptance checks.
+Status: **historical evaluation, superseded by authorized implementation**. The
+user first requested evaluation only, then explicitly authorized the desktop web
+switch. See `business/decisions.md` and `openspec/changes/web-desktop-foundation/`.
+The comparisons below remain rationale; they are not performance measurements.
 
 ## Recommendation
 
