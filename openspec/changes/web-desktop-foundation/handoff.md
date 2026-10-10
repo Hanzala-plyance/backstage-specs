@@ -56,8 +56,8 @@ so launching preparation cannot mutate or invalidate the signed bundle.
   sustains, white Star Power phrase gems, cyan active Star Power, sweeping beams.
 - Evidence: 30 desktop unit tests; source and packaged Electron smoke pass including
   pad navigation (with a remapped green). Commits on `feature/web-desktop-foundation`:
-  `4134f62` (feature), cleanup commit `1535c53` (tested commit), evidence follow-up.
-  `release/acceptance.json` names `1535c53` and ASAR `10d3ee85…`.
+  `4134f62` (feature), cleanup `1535c53`, CI-responsiveness fix `13cd64c` (tested commit), evidence follow-up.
+  `release/acceptance.json` names `13cd64c` and ASAR `2d592e67…`.
 - Repository cleanup: removed Backstage/ Unity fork and YARG.Core submodule (tag
   `unity-reference` preserves them), commercial converter sample songs, stale
   imported dotfiles and Unity-only `scripts/launch.py`. Docs point at the tag.
