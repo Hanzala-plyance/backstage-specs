@@ -9,5 +9,5 @@
 
 ## 3. Verification
 - [x] 3.1 Unit tests for assignment and routing; Electron smoke for opening flow and two players.
-- [ ] 3.2 Packaged build passes; CI passes; merge to develop.
+- [x] 3.2 Packaged build passes; CI passes; merge to develop.
 - [ ] 3.3 Verify with physical controllers (two or more) before stage.

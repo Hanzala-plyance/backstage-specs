@@ -34,4 +34,6 @@ song clock at quarter speed for that strum. Push and PR checks then passed on
 
 ## Not verified / next
 Physical multi-controller play, audible timing, clean install, recovery.
-Next action: merge PR #2 after CI passes; then physical acceptance before stage.
+Merged to develop: PR #2, merge commit `87c38013463b79699c633a037b3f01dccdbf0e5d`
+(2026-10-10, merged by the user after push and PR checks passed on `e7d3ac2`).
+Next action: physical multi-controller acceptance before stage.
