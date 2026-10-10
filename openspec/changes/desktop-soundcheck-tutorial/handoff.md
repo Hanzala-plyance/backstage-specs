@@ -40,4 +40,4 @@ dev Mac); three reruns passed.
   smoke passed at load ~18-27 on 8 cores; test:dev and 54 unit tests pass.
 
 ## Next
-User merges PR #6; then check 3.1/3.2. Physical guitar acceptance remains.
+Merged to develop as `e0ddaef` (PR #6). Physical guitar acceptance of lessons and the controller check remains before stage.

@@ -10,5 +10,5 @@
 - [x] 2.5 Smoke: menu to Soundcheck, demo plays, lesson turn graded, full track
 
 ## 3. Release
-- [ ] 3.1 Evidence recorded, PR to develop with checks passing
-- [ ] 3.2 Merged to develop
+- [x] 3.1 Evidence recorded, PR to develop with checks passing
+- [x] 3.2 Merged to develop
