@@ -15,6 +15,15 @@ The main menu SHALL offer Soundcheck, a section of guided lessons that teach how
 - **WHEN** a lesson menu is shown
 - **THEN** it can be operated with strum up/down, green to select and red to go back
 
+### Requirement: Soundcheck tests every input
+Soundcheck SHALL begin with a controller check that confirms each fret, strum, Star Power, whammy and (on a pad) Start input, and a single Start action SHALL lead through the check, every lesson and the full track in order.
+#### Scenario: A player starts Soundcheck
+- **WHEN** the player chooses Start Soundcheck
+- **THEN** the first unfinished step opens, beginning with the controller check, and each passed step offers the next
+#### Scenario: An input never registers
+- **WHEN** an input has not been detected in the controller check
+- **THEN** its tile stays unlit and the player is told to remap it in Controllers
+
 ### Requirement: Library lists songs only
 The song library SHALL NOT list the Soundcheck practice track among songs.
 #### Scenario: Library opens

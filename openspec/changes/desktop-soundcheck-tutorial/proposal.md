@@ -10,6 +10,9 @@ nothing explains frets, strumming, chords, sustains, HOPOs or Star Power.
   Streaks & multiplier. Each lesson explains the idea with the player's own
   controls, plays a demo in which the game performs the chart on the real highway
   with on-screen cues, then gives the player a turn with a goal to pass.
+- A controller check first (every fret, strum, Star Power, whammy, Start), and one
+  Start Soundcheck button that leads through check, lessons and full track. Lesson
+  goals are forgiving for beginners; the full track starts directly on Easy.
 - Lesson progress is remembered on this computer; a final step plays the full
   Soundcheck track (existing practice song) through the normal game.
 - The practice track no longer appears in the song library list or count; the
