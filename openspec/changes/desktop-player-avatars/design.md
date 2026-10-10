@@ -8,8 +8,15 @@
 - `core/avatars.ts` (pure, unit tested): presets, `cleanName`, `slotName`,
   `stylize` (posterized gradient map to the theme palette), `motion` (frame
   difference in a zone, used for the raised-hand trigger), `moodFor`.
-- `Avatar.tsx`: SVG performer (body, head or photo, instrument by part) with CSS
-  animations; a hit counter re-triggers the strum/strike, tempo drives the groove.
+- `game/stage3d.ts`: Three.js performers built from primitives (no downloaded
+  assets): custom toon shader with screen-space halftone and rim light, inverted
+  hull outlines, face textures per expression drawn on canvas (photo faces keep
+  the photo and add comic marks). One transparent canvas behind the highway holds
+  every player; poses are quantized to 1/12 s and the stage renders only when the
+  pose changes, so the cost is about 12 small renders a second. Failure to start
+  WebGL leaves the game running without the band.
+- `AvatarView.tsx`: live 3D preview and cached one-off portrait renders
+  (sequential, context released after each).
 - `Avatars.tsx`: slot tabs, name input, premade grid, camera flow (preview,
   raise-hand countdown, capture, use/retake). Game reads names and looks through
   `PlayerInit`; PlayerRuntime stats add hits and misses.

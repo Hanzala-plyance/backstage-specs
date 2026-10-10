@@ -24,6 +24,13 @@ Feature `23545ac` (tested commit), ASAR
 unit, 50 converter, 11 controller, promotion tests; source/packaged smoke and
 test:dev pass (one packaged run missed a timed note under load; retry passed).
 
+## 3D band (user feedback: 2D looked poor; wanted 3D in the stage lights)
+- 2D `Avatar.tsx` removed; `stage3d.ts` + `AvatarView.tsx` added; Game shows the
+  band stage, name tags and comic captions. Tested commit `109a80e`, ASAR
+  `5b447dfdb9ca44f03215df627e7a8077d9159fb2c5ddc1bb2ba6a9bac313c638` (2.3 MB).
+  60 unit tests, source/packaged smoke and test:dev pass. Frame cost was not
+  profiled on low-end hardware; by design the stage renders 12 times a second.
+
 ## Next
 User merges PR #7. Verify a real camera and the macOS permission prompt on the
 packaged app by hand.

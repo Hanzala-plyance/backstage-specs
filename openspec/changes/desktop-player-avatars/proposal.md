@@ -11,9 +11,12 @@ streaks and Star Power, plus a short player name instead of P1/P2/P3.
   upper corners starts a 3-2-1 countdown) or presses Take photo; the photo is
   restyled to the game's neon theme. Camera avatars have no customization; photos
   stay on this computer.
-- In game, each player's avatar plays their part (guitar, bass, drums): a strum or
-  stick hit for each note the player hits, a groove to the tempo, expressions for
-  misses, streaks and Star Power.
+- In game, players perform as chibi 3D characters on the stage behind the
+  highway, in the spotlights, drawn in a Spider-Verse-like comic style (toon
+  bands, halftone, ink outlines, off-register colour, animated on twos). Each plays
+  their part (guitar, bass, drums): a strum or stick hit for each note hit, a
+  groove to the tempo, funny expressions for misses, streaks and Star Power, and
+  comic captions. The user rejected the first 2D version.
 
 # Capabilities
 ## Modified Capabilities
