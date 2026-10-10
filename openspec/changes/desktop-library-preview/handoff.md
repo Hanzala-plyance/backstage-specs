@@ -16,7 +16,11 @@ PR: https://github.com/Hanzala-plyance/backstage/pull/3
   shortcut on a focused song; Esc/red cancels.
 
 ## Evidence
-Feature `f2b629b` (tested commit), evidence `f996331`. ASAR
+Feature `f2b629b`, evidence `f996331`, test fix `14a6e12` (tested commit),
+evidence `d55a767`. First CI round: PR run passed, push run failed on the
+two-player pad strum (slow software frames). The smoke now slows the song clock
+before waiting for scores and presses fret+strum together; verified locally
+with 500 ms frames. Push and PR checks then passed on `d55a767`. ASAR
 `ec367e450281ff0c37165d3eb8b3e8a72e573661e58c42649547eb9a6610163b`.
 36 desktop unit tests; source and packaged smoke pass with exit code checked.
 Real-library check (no removal): Janice previews from 30 s; queue shows none of
@@ -24,4 +28,4 @@ the five installed songs.
 
 ## Not verified / next
 Physical controllers, audible timing, clean install, recovery; OS Trash restore
-on another machine. Next action: merge PR #3 after CI passes.
+on another machine. Next action: user merges PR #3 (checks green on `d55a767`).
