@@ -9,4 +9,4 @@
 
 ## 3. Verification
 - [x] 3.1 Unit tests (cleanup, naming, rename confinement, cover matching); converter tests; smoke.
-- [ ] 3.2 Real-library check; packaged build; CI; merge.
+- [x] 3.2 Real-library check; packaged build; CI; merge.

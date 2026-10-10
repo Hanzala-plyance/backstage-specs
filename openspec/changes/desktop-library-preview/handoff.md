@@ -29,3 +29,5 @@ the five installed songs.
 ## Not verified / next
 Physical controllers, audible timing, clean install, recovery; OS Trash restore
 on another machine. Next action: user merges PR #3 (checks green on `d55a767`).
+
+Merged to develop by the user (2026-10-10): PR #3 `e722890`, PR #4 `803c8a1`.

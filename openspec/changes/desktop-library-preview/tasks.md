@@ -8,4 +8,4 @@
 
 ## 3. Verification
 - [x] 3.1 Unit tests for removal confinement; smoke for preview, queue filter and removal.
-- [ ] 3.2 Packaged build, CI, merge to develop.
+- [x] 3.2 Packaged build, CI, merge to develop.

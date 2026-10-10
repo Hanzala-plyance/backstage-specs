@@ -28,3 +28,5 @@ catalog) and Yung Pinch (not in catalog) correctly kept their art.
 Lookups send artist and title to Apple. Covers are copyrighted artwork: personal
 use only; venue use stays behind catalog authorization. The user's real library is
 renamed on their first launch of this build. Next: CI, then merge after PR #3.
+
+Merged to develop by the user (2026-10-10): PR #3 `e722890`, PR #4 `803c8a1`.
