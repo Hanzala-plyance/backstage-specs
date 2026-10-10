@@ -32,5 +32,12 @@ dev Mac); three reruns passed.
   real-time keyboard steps, load average ~16), passes when the machine is idle;
   packaged smoke and test:dev pass.
 
+## Banner removal (user request)
+- Library Soundcheck banner and its styles removed (`6c2b54f`). Smoke rounds whose
+  first note arrives while the stage warms up now slow the song clock (judgment
+  follows it). ASAR `bf7ac218e132a3834ec3882b96934000781d4280631c0bd13c89e0a2af6048ba`
+  (test-only commits after it don't change the bundle). Source x2 and packaged
+  smoke passed at load ~18-27 on 8 cores; test:dev and 54 unit tests pass.
+
 ## Next
 User merges PR #6; then check 3.1/3.2. Physical guitar acceptance remains.

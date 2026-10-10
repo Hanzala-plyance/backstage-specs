@@ -16,7 +16,7 @@ nothing explains frets, strumming, chords, sustains, HOPOs or Star Power.
 - Lesson progress is remembered on this computer; a final step plays the full
   Soundcheck track (existing practice song) through the normal game.
 - The practice track no longer appears in the song library list or count; the
-  library banner points to Soundcheck instead.
+  Soundcheck banner is removed from the library; Soundcheck lives only in its own section.
 
 # Capabilities
 ## Modified Capabilities
