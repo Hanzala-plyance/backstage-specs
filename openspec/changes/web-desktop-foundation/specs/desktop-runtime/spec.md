@@ -35,3 +35,15 @@ The runtime SHALL support five-fret strums, lower-fret anchoring, HOPOs, pull-of
 #### Scenario: The guitar stage is displayed
 - **WHEN** a guitar chart is played
 - **THEN** raised circular gems and fret receptors show five distinct lane colors, note-type markings and Star Power state
+### Requirement: Controller menu navigation
+Menus SHALL be operable from a guitar or gamepad using its saved mapping: strum moves focus, green selects, red backs out, yellow switches section and Start pauses or resumes. Every menu screen SHALL show the active controls as fret-colored hints, or key hints after keyboard use. Buttons held when a screen or pad appears SHALL NOT act on it.
+#### Scenario: A guitar player picks a song
+- **WHEN** the player strums to a song and presses green
+- **THEN** the track dialog opens with Take the stage focused, and instrument and difficulty are selectable by strum and green
+#### Scenario: A song is paused from the controller
+- **WHEN** the player presses Start during a song
+- **THEN** a pause menu offers Resume, Restart and Back to library, and red resumes
+#### Scenario: A mapping is being captured
+- **WHEN** the Controllers page is listening for a new binding
+- **THEN** menu navigation ignores pad input until the binding is captured
+

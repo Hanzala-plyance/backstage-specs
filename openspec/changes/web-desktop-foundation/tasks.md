@@ -20,3 +20,11 @@
 - [x] 4.2 Test scoring, anchoring, HOPO/pull-off/taps, strum leniency, sustain drops, Star Power/whammy and solo bonuses.
 - [x] 4.3 Add circular 3D gems, note-type markings, rock-stage styling and live multiplier/Star Power HUD.
 - [x] 4.4 Verify packaged gameplay and document remaining parity/hardware gaps.
+
+## 5. Controller navigation and stage visuals
+- [x] 5.1 Fix audio start: media-element playback without an AudioContext dependency; report file, blocked and device failures accurately.
+- [x] 5.2 Add YARG-style pad menu navigation, hint bar, guitar-selectable track dialog and in-game pause menu with restart.
+- [x] 5.3 Restyle UI and 3D stage: neon palette, tempo grid, multiplier rails, hit flames/sparks, Star Power phrase notes and stage beams.
+- [x] 5.4 Unit-test menu edge detection/repeat and beat grid; extend Electron smoke with pad navigation; verify packaged build.
+- [ ] 5.5 Verify navigation and visuals with physical guitars and gamepads.
+

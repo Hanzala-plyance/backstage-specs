@@ -40,3 +40,15 @@ Star Power doubles the score multiplier, not playback speed. Use YARG's source
 rules and genre UI conventions; use original Backstage circular 3D gems and a
 rougher rock-stage appearance. Track implemented core mechanics separately from
 advanced YARG parity and physical-controller acceptance.
+
+## 2026-10-10 — Approve desktop foundation for develop; retire Unity fork there
+
+The user approves the current desktop foundation (controller menu navigation,
+neon stage visuals, audio start fix) for develop as a semi-stable development
+build, and asks to remove artifacts develop does not need. The user chose to
+remove the Backstage-branded YARG/Unity fork and YARG.Core submodule from develop.
+It is preserved at implementation tag `unity-reference` (last develop state that
+contained it); the unmodified upstream import remains on `starter`. This replaces
+"preserve Unity as reference while migrating" with reference-by-tag. Commercial
+sample songs were removed from the converter: converted songs stay out of Git and
+were not authorized catalog content. Stage and main gates are unchanged.

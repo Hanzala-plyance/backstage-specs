@@ -40,6 +40,30 @@ caches, Unity assets, Python environments, model weights and user songs are excl
 Service output/cache is writable user data; Python bytecode writing is disabled
 so launching preparation cannot mutate or invalidate the signed bundle.
 
+### Revision 5 — controller navigation, stage visuals, audio start (Claude Code, 2026-10-10)
+
+- Audio: songs play through the media element directly; start no longer depends on
+  AudioContext resume. Errors distinguish bad files from blocked audio and device
+  failures (a file error is no longer overwritten). Original "Audio could not start"
+  report was not reproducible in automation on the reporter's songs or build.
+- Navigation: strum/green/red/yellow/Start across library, dialog, pages and the
+  in-game menu, using each pad's saved mapping; held buttons are ignored when a
+  screen or pad appears; navigation pauses while Controllers captures a binding.
+  Hint bar shows fret gems, or keys after keyboard use. Enter starts/resumes.
+- Library refreshes itself when a queued song installs.
+- Visuals: neon stage palette; highway with scrolling board, beat/bar grid from tempo
+  map, rails colored by multiplier tier, receptors, hit flames, sparks, wobbling held
+  sustains, white Star Power phrase gems, cyan active Star Power, sweeping beams.
+- Evidence: 30 desktop unit tests; source and packaged Electron smoke pass including
+  pad navigation (with a remapped green). Commits on `feature/web-desktop-foundation`:
+  `4134f62` (feature), cleanup commit `1535c53` (tested commit), evidence follow-up.
+  `release/acceptance.json` names `1535c53` and ASAR `10d3ee85…`.
+- Repository cleanup: removed Backstage/ Unity fork and YARG.Core submodule (tag
+  `unity-reference` preserves them), commercial converter sample songs, stale
+  imported dotfiles and Unity-only `scripts/launch.py`. Docs point at the tag.
+- Not verified: physical guitar/gamepad navigation, drums Star Power (phrases are
+  only parsed for guitar-family tracks), long-session rendering performance.
+
 ## Remaining work and limits
 
 Required before stable main: physical guitar/gamepad/MIDI, audible calibration,
