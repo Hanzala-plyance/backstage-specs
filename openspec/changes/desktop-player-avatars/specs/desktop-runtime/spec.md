@@ -28,3 +28,12 @@ In game each player's avatar SHALL play that player's instrument and react to th
 #### Scenario: Star Power
 - **WHEN** the player's Star Power is active
 - **THEN** the avatar shows its Star Power state
+
+### Requirement: Performer gear and placement
+Each slot SHALL choose a guitar shape, a finish, a drum kit and a stage side; in single player the performer SHALL stand on the chosen side of the highway, not behind its centre.
+#### Scenario: A player picks gear
+- **WHEN** a player chooses the Single Cut shape and the left side
+- **THEN** their performer plays a single-cut guitar and stands left of the highway in game
+#### Scenario: Natural playing
+- **WHEN** the player hits a note
+- **THEN** the fretting hand moves toward that note's fret and the strumming hand strokes the strings, or the drummer strikes the matching piece

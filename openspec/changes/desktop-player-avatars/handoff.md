@@ -31,6 +31,15 @@ test:dev pass (one packaged run missed a timed note under load; retry passed).
   60 unit tests, source/packaged smoke and test:dev pass. Frame cost was not
   profiled on low-end hardware; by design the stage renders 12 times a second.
 
+## Gear and natural motion (user feedback: stiff animation, centred performer)
+- Two-bone IK arms with eased targets (fret per lane, alternating strokes, drum
+  piece per lane, kick pedal), 30 poses/s; five guitar outlines extruded with
+  pickguard/pickups/strings/headstock; four drum kits; per-slot gear and stage
+  side (store-validated). Generic style names because brand/model names are
+  trademarks. Tested commit `aabf5ae`, ASAR
+  `31ba789fa04de6a983239134b5fb2f860c3b631caba977f1fc18c88500e76c01` (2.4 MB);
+  61 unit tests, source/packaged smoke, test:dev pass.
+
 ## Next
 User merges PR #7. Verify a real camera and the macOS permission prompt on the
 packaged app by hand.
