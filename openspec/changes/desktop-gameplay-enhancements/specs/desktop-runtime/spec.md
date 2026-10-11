@@ -22,13 +22,16 @@ Performers SHALL stand at the outer side of their player's highway, larger and p
 - **THEN** Player 1's performer stands at the left edge and Player 2's at the right edge
 
 ### Requirement: Play feedback
-The game SHALL give quiet audio feedback: a missed-riff sound and a small song volume dip on misses, a small rise on perfect hits within bounds, and a matching tone when a sustain is held to its end.
+The game SHALL play a power-up sound when Star Power activates and SHALL adjust the song volume slightly: a small dip on misses and a small rise on perfect hits, within bounds. It SHALL NOT play miss or sustain sound effects.
 #### Scenario: Volume stays bounded
 - **WHEN** a player misses many notes in a row
 - **THEN** the song volume never drops below 82% of the chosen volume, and perfect hits never raise it above 105% or full device volume
+#### Scenario: Star Power activates
+- **WHEN** a player activates Star Power
+- **THEN** a short power-up sound plays over the song
 
 ### Requirement: Celebration effects
-The game SHALL show a larger animation for chord hits and falling stars while Star Power is active.
+The game SHALL show a larger animation for chord hits, falling stars while Star Power is active, and large comic pop-ups over the performers.
 #### Scenario: Star Power
 - **WHEN** a player activates Star Power
 - **THEN** stars fall in the background until it ends

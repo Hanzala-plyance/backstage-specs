@@ -8,10 +8,10 @@
   `sustained` (sustains held to their end) with the lanes of the last one.
 
 ## Feedback (core/feedback.ts)
-- One WebAudio context per song. `miss()` plays a short detuned, down-bending
-  square/saw stab through a low-pass filter (~120 ms, quiet); `sustain(lane)`
-  plays a plucked tone (Karplus-Strong) at the lane's pitch. Both are scaled
-  by the player's volume and kept well under the music.
+- One WebAudio context per song. `powerUp()` plays a filtered rising saw sweep
+  with a short triangle arpeggio when Star Power activates, scaled by the
+  player's volume. (Miss and sustain sounds were tried and removed after
+  playtest.)
 - `SongGain`: factor 1.0 start, miss/overstrum -0.03 (floor 0.82), perfect
   +0.03 (cap 1.05); applied to the song element as min(1, volume × factor),
   eased per frame.

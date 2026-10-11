@@ -20,6 +20,15 @@ Code: feature/gameplay-enhancements stacked on feature/controller-stability.
   existing Star Power timing step at load average ~20; rerun passed.
 - PR: https://github.com/Hanzala-plyance/backstage/pull/12 (stacked on #11).
 
+## Revisions after playtest (user, 2026-10-11)
+- Star Power meter moved into the highway (strip under the frets); numbers
+  beside the highway, away from the performer; no bar under the highway.
+- Performers raised when two or more play.
+- Bigger scores; comic pop-ups enlarged to halftone starburst panels that
+  grow toward the screen centre.
+- Miss clunk and sustain pluck removed (user found them bad); a Star Power
+  power-up sound added for evaluation. Song volume dip/rise kept.
+
 ## Blockers
 - Playtest on real guitars: strum-hold feel, effect and volume levels.
 
