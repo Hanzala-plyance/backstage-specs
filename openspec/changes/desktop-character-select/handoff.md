@@ -17,5 +17,14 @@ unit, source/packaged smoke (mouse P1 + pad P2 picking at once, keypad "B" by
 multi-tap, camera tile for P2, pop-up guitar), test:dev, converter, controller,
 promotion pass.
 
+## Follow-ups (user requests)
+- Brawl-style keypad (letter groups, 123, ←, wide OK). Every page fits the
+  window; smoke asserts no page overflow. 13 new avatars (8 slim long-haired,
+  3 rockers, demon and psychedelic tributes; original paint, not trademarked
+  makeup), brows/ears/nose/neck/belt/jackets, two-row grid, labelled card gear.
+  Tested commit `c187ee7`, ASAR
+  `5f982d7cb4df809704a48380e9494538fb01afdf9ae181a206ec68b3c9fd7c60`; 75 unit,
+  source/packaged smoke, test:dev pass.
+
 ## Next
 User reviews PR; merge.
