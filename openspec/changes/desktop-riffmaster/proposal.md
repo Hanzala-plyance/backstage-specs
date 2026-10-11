@@ -5,6 +5,11 @@ this repository, and with several controllers at once. macOS has no driver for
 the Riffmaster receiver (0e6f:0248), so it never appears to the Gamepad API.
 
 # What Changes
+- Revised at the user's request: Backstage reads the receivers in-process
+  (usb module, GIP start-up and decoding adapted from MacRiff), connecting them
+  automatically and reconnecting after a replug, with no separate program. The
+  administrator reader below remains only as a fallback when a receiver can't be
+  opened directly.
 - Backstage becomes a native consumer of the MacRiff controller protocol
   (16-byte MRF2 reports and MRFH heartbeats over a private Unix socket per
   player). No adapter is injected into any game; no keyboard injection.

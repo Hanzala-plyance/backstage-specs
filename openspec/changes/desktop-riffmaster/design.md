@@ -1,4 +1,12 @@
 # Design
+- Default (`Riffmasters` in `electron/riff.cjs`, `riff/gip.cjs`): open each
+  receiver as the current user, set configuration 1, claim interface 0, send the
+  five-packet GIP start-up (repeated when the guitar re-announces), poll the
+  interrupt endpoint and decode in the main process. usb attach/detach events
+  drive automatic reconnect; indexes stay stable per receiver. Claim failures
+  with ACCESS/BUSY (or NOT_FOUND at claim) are reported as held by another app
+  and offer the administrator fallback.
+- Fallback (`AdminBridge`), as originally designed:
 - Main (`electron/riff.cjs`): discovery with `usb.getDeviceList()` filtered to
   0e6f:0248 (read-only). Connect creates a 0700 session dir, one `net.Server` per
   receiver on `<session>/pN/controller.sock` (0600), writes `controllers.json`,
