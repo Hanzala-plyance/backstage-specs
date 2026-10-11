@@ -17,3 +17,9 @@ Soundcheck lessons SHALL run for every joined player at once, each on their own 
 #### Scenario: Guitar and drums together
 - **WHEN** Player 1 plays guitar and Player 2 plays drums in a lesson
 - **THEN** Player 1 sees the guitar lesson and Player 2 the matching drum lesson, each with their own demo, cues and result
+
+### Requirement: Lock in on the select screen
+The character select SHALL let each player lock in their choice with blue and unlock it with red; while locked, the player's avatar and card SHALL NOT change.
+#### Scenario: Locked player presses green
+- **WHEN** Player 2 presses blue and then green on their card
+- **THEN** a READY badge shows and nothing on the card changes until Player 2 presses red
