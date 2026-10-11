@@ -61,5 +61,4 @@ Packaged binary loads usb and lists the two physical receivers read-only.
   source/packaged smoke (toggle from the pad's own pop-up), test:dev pass.
 
 ## Next
-User: stop MacRiff readers holding the receivers, Connect in Backstage, approve,
-play with both guitars (task 2.5). Then PR merge.
+Merged to develop as `8eca10b` (PR #8). Real Riffmaster input on the user hardware (task 2.5) remains unverified.

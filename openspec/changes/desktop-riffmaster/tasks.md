@@ -9,5 +9,5 @@
 - [ ] 2.5 Hardware: user connects real Riffmasters and plays (user-run)
 
 ## 3. Release
-- [ ] 3.1 Evidence recorded, PR to develop with checks passing
-- [ ] 3.2 Merged to develop
+- [x] 3.1 Evidence recorded, PR to develop with checks passing
+- [x] 3.2 Merged to develop
