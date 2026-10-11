@@ -41,5 +41,4 @@ test:dev pass (one packaged run missed a timed note under load; retry passed).
   61 unit tests, source/packaged smoke, test:dev pass.
 
 ## Next
-User merges PR #7. Verify a real camera and the macOS permission prompt on the
-packaged app by hand.
+Merged to develop as `45aafb0` (PR #7). Real camera, macOS prompt and low-end frame cost remain to verify by hand.

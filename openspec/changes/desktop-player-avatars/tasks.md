@@ -9,5 +9,5 @@
 - [x] 2.5 Smoke: names, premade avatar in game, fake-camera capture
 
 ## 3. Release
-- [ ] 3.1 Evidence recorded, PR to develop with checks passing
-- [ ] 3.2 Merged to develop
+- [x] 3.1 Evidence recorded, PR to develop with checks passing
+- [x] 3.2 Merged to develop
