@@ -43,6 +43,15 @@ Packaged binary loads usb and lists the two physical receivers read-only.
   source/packaged smoke (auto-assign toast, solo dialog on Riffmaster 1, hint for
   Riffmaster 2), test:dev pass. Not reproduced on the user's live instance.
 
+## Player bar (user request: Clone Hero-style join and setup, avatar in pop-up)
+- `PlayerBar.tsx`, `joinPlayer`/`cycleSetting`/`leavePlayer`, `MenuPad.pollFrom`
+  (source per press), Start routing in App, choose() keeps player choices.
+  Avatar row cycles presets (and the camera photo) via the same band slots as the
+  Avatars section. Tested commit `71ef21e`, ASAR
+  `29a61fc3c2010ea91dfaebf8408c72b298823b00ca6cc9d3f197da4a9f63e41f`; 71 unit,
+  source/packaged smoke (gamepad joins with Start, picks avatar and Medium,
+  closes with red), test:dev pass.
+
 ## Next
 User: stop MacRiff readers holding the receivers, Connect in Backstage, approve,
 play with both guitars (task 2.5). Then PR merge.

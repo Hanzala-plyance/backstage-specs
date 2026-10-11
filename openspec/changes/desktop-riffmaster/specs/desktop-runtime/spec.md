@@ -26,3 +26,12 @@ A controller that connects while Player 1 uses the keyboard SHALL become Player 
 #### Scenario: Unassigned guitar in a song
 - **WHEN** a connected controller that no player uses is pressed during a song
 - **THEN** the game names it and says to assign it in Controllers or add it as a player
+
+### Requirement: Press Start to join
+A bar along the bottom of the menus SHALL show Players 1–4; an unassigned controller pressing Start SHALL join as the next player and open a setup pop-up driven only by that controller, with an input test, avatar, instrument, difficulty and leave.
+#### Scenario: Second guitar joins
+- **WHEN** a controller no player uses presses Start on the home screen or any page
+- **THEN** it joins as the next player and its pop-up opens above the bar
+#### Scenario: Player sets up with their own controller
+- **WHEN** the joined player strums and presses green in the pop-up
+- **THEN** their avatar, instrument or difficulty changes, while other controllers keep driving the menus
