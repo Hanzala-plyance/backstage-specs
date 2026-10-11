@@ -52,6 +52,14 @@ Packaged binary loads usb and lists the two physical receivers read-only.
   source/packaged smoke (gamepad joins with Start, picks avatar and Medium,
   closes with red), test:dev pass.
 
+## Per-player strumming
+- User report: strumming didn't hit notes. Their saved global mode was "tap"
+  (Settings → Tap assist), which ignores strums. Each player's pop-up now has
+  Strumming On/Off (unset follows Settings); PlayerInit.mode feeds each
+  PlayerRuntime. Tested commit `8bb918b`, ASAR
+  `f92572eb0403631409858aa006f341b8dd63517776d84bf7ccc6d80f32503a61`; 72 unit,
+  source/packaged smoke (toggle from the pad's own pop-up), test:dev pass.
+
 ## Next
 User: stop MacRiff readers holding the receivers, Connect in Backstage, approve,
 play with both guitars (task 2.5). Then PR merge.

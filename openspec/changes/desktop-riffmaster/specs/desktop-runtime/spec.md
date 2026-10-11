@@ -28,7 +28,7 @@ A controller that connects while Player 1 uses the keyboard SHALL become Player 
 - **THEN** the game names it and says to assign it in Controllers or add it as a player
 
 ### Requirement: Press Start to join
-A bar along the bottom of the menus SHALL show Players 1–4; an unassigned controller pressing Start SHALL join as the next player and open a setup pop-up driven only by that controller, with an input test, avatar, instrument, difficulty and leave.
+A bar along the bottom of the menus SHALL show Players 1–4; an unassigned controller pressing Start SHALL join as the next player and open a setup pop-up driven only by that controller, with an input test, avatar, instrument, difficulty, strumming on or off (guitar parts) and leave.
 #### Scenario: Second guitar joins
 - **WHEN** a controller no player uses presses Start on the home screen or any page
 - **THEN** it joins as the next player and its pop-up opens above the bar
