@@ -34,6 +34,15 @@ Packaged binary loads usb and lists the two physical receivers read-only.
   LIBUSB_ERROR_NOT_FOUND because MacRiff's root reader (pid 73101) holds that
   receiver. Whether a normal user can claim a free receiver is still unverified.
 
+## Reported: guitar navigates menus but is ignored in game
+- Root cause: menus follow every controller, a song only its players'; Player 1
+  stayed on the keyboard. Fixed in `5ad62d7`: arriving controller becomes
+  Player 1 (with notice) when P1 is on the keyboard; unassigned controller input
+  in a song shows a hint. ASAR
+  `816a1e0b2783b139a51856d01647a5850421be9579c74608278d9dc6bd6bfebe`; 69 unit,
+  source/packaged smoke (auto-assign toast, solo dialog on Riffmaster 1, hint for
+  Riffmaster 2), test:dev pass. Not reproduced on the user's live instance.
+
 ## Next
 User: stop MacRiff readers holding the receivers, Connect in Backstage, approve,
 play with both guitars (task 2.5). Then PR merge.

@@ -17,3 +17,12 @@ Backstage SHALL read each connected PDP Riffmaster for Xbox receiver itself and 
 #### Scenario: A receiver drops
 - **WHEN** a reader stops sending reports or heartbeats for 3 seconds
 - **THEN** that controller shows as disconnected and a game in progress pauses for that player
+
+### Requirement: Controllers reach the song
+A controller that connects while Player 1 uses the keyboard SHALL become Player 1, and a controller played during a song without being assigned to a player SHALL be reported rather than silently ignored.
+#### Scenario: Guitar connects
+- **WHEN** a Riffmaster or gamepad connects and Player 1 is on the keyboard
+- **THEN** Player 1 switches to it and the app says so
+#### Scenario: Unassigned guitar in a song
+- **WHEN** a connected controller that no player uses is pressed during a song
+- **THEN** the game names it and says to assign it in Controllers or add it as a player
